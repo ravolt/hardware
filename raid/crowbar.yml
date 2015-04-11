@@ -22,7 +22,7 @@ crowbar:
 
 roles:
   - name: raid-tools-install
-    jig: chef
+    jig: chef-solo
     requires:
       - deployer-client
     flags:

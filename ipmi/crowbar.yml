@@ -40,13 +40,13 @@ hammers:
 
 roles:
   - name: ipmi-master
-    jig: chef
+    jig: chef-solo
     requires:
       - network-bmc
     flags:
       - bootstrap
   - name: ipmi-discover
-    jig: chef
+    jig: chef-solo
     requires:
       - deployer-client
     flags:
@@ -93,7 +93,7 @@ roles:
         description: "The MAC address of this IPMI controller"
         map: 'crowbar_wall/ipmi/laninfo/macaddr'
   - name: ipmi-configure
-    jig: chef
+    jig: chef-solo
     requires:
       - network-bmc
       - provisioner-repos
